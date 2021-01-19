@@ -1,33 +1,32 @@
-
 def reverse_list(input_list):
     """
     Reverses order of elements in list input_list.
     """
-    return None
+    n = len(input_list)
+    output_list= [0]*n
+    i=0
+    j=n-1
+    for ele in input_list:
+        output_list[j]=ele
+        j -= 1
 
-def reverse_string(input_str):
-    """
-    Reverses order of characters in string input_str.
-    """
-    return None
+    return output_list
 
-def is_english_vowel(character):
+def count_digits(number):
     """
-    Returns True if character is an english vowel
-    and False otherwise.
+    Return count of digits
     """
-    return None
+    if number == 0:
+        return 1
 
-def find_longest_word(sentence):
-    """
-    Returns the longest word in string sentence.
-    In case there are several, return the first.
-    """
-    return None
+    count = 0
+    while number > 0:
+        number /= 10
+        count += 1
 
-def get_word_lengths(text):
-    """
-    Returns a list of integers representing
-    the word lengths in string text.
-    """
-    return None
+    return count
+
+
+
+# print(reverse_list([1,2,3]))
+# print(count_digits(1))
